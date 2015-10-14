@@ -59,6 +59,11 @@ angular.module('Google.controllers')
 			]
 		}*/
 
+		$scope.collapsed = false;
+		$scope.collapse = function(){
+			$scope.collapsed = !$scope.collapsed;
+		}
+
 		$scope.touchButton = function(user) {
 			user.rank = "Knight";
 		}
