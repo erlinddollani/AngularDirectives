@@ -1,17 +1,19 @@
 'use strict';
 
 /**
- * @ngdoc overview
- * @name angulardirectivesApp
- * @description
- * # angulardirectivesApp
- *
  * Main module of the application.
  */
 angular
-  .module('angulardirectivesApp', [
+  .module('Google', [
+  	'ui.router',
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'Google.templates',
+    'Google.routes',
+    'Google.directives',
+    'Google.services',
+    'Google.controllers',
+    'Google.filters'
   ]);
