@@ -4,9 +4,9 @@
  'use strict';
  angular.module('Google.directives')
  	.directive('userInfoCard', function() {
- 		return {
- 			controller: 'userInfoCardController', /* controllers/userInfoCard/userInfoCard.js */
- 			templateUrl: "../../views/userInfoCard/userInfoCardTemplate.html",
- 			restrict: 'EA'
- 		}
+ 			return {
+ 				templateUrl: "../../views/userInfoCard/userInfoCardTemplate.html",
+ 				restrict: 'EA',
+ 				controller: 'userInfoCardController',  /*controllers/userInfoCard/userInfoCard.js*/ 	
+ 			}
  	});

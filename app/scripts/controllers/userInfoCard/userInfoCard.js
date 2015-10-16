@@ -1,10 +1,11 @@
 'use-strict'
 
 angular.module('Google.controllers')
-	.controller('userInfoCardController', function($scope){
-		$scope.users = {
-			user1: {
+	.controller('userInfoCardController', function($scope) {
+		$scope.users = [
+			{
 				name: 'Senior Leone',
+				collapsed: false,
 				address: {
 					street: 'Donika Kastrioti',
 					city: 'Tirana',
@@ -16,12 +17,13 @@ angular.module('Google.controllers')
 					'Marko'
 				]
 			},
-			user2: {
+			{
 				name: 'Senior Maestro Leone ',
+				collapsed: false,
 				address: {
-				street: 'Donika Kastrioti',
-				city: 'Tirana',
-				planet: 'Earth'
+					street: 'Donika Kastrioti',
+					city: 'Tirana',
+					planet: 'Earth'
 				},
 				friends: [
 					'Lupito',
@@ -29,9 +31,8 @@ angular.module('Google.controllers')
 					'Marko'
 				]
 			}
-		}
-		/*
-		$scope.user = {
+		]
+		/*$scope.user1 = {
 			name: 'Senior Leone',
 			address: {
 				street: 'Donika Kastrioti',
@@ -43,8 +44,8 @@ angular.module('Google.controllers')
 				'Ben',
 				'Marko'
 			]
-		}*/
-		/*
+		}
+
 		$scope.user2 = {
 			name: 'Senior Maestro Leone ',
 			address: {
@@ -59,9 +60,12 @@ angular.module('Google.controllers')
 			]
 		}*/
 
-		$scope.collapsed = false;
-		$scope.collapse = function(){
-			$scope.collapsed = !$scope.collapsed;
+		$scope.collapse = function(relativeUser) {
+			angular.forEach($scope.users, function(user, key) {
+				if(user===relativeUser){
+					$scope.users[key].collapsed = !$scope.users[key].collapsed;
+				}
+			});
 		}
 
 		$scope.touchButton = function(user) {
