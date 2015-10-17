@@ -1,7 +1,9 @@
-
-<video id="vid" spacebar-support event-pause='handlePause(evt)' controls preload="none" poster="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4" height="530" style="margin-left:-15%">
+<h4 style="color:blue">Press SPACE to start video or pause</h4>
+<video id="vid" spacebar-support event-pause='handlePause(evt)' controls preload="none" poster="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4" height="530" class="video-left video-top">
 	<source src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4"></source>
 	<source src="http://media.w3.org/2010/05/sintel/trailer.webm5" type="video/webm"></source>
 	<source src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg"></source>	
 </video>
+<pre>{{spacebar-support}}</pre>
+<pre>{{event-pause}}</pre>
 <div ng-repeat="message in messages">{{ message.text }}</div>
