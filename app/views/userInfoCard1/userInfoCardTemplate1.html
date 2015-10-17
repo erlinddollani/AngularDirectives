@@ -1,7 +1,9 @@
 <div>
 	<div class="panel panel-primary">
-		<div class="panel-heading" ng-click="collapse()" style="cursor:pointer">{{user.name}}</div>
-		<div class="panel-body" ng-hide="!!collapsed">
+		<div class="panel-heading" ng-click="collapse()" style="cursor:pointer"  
+			state-display="user.level user-ok user-warning user-problem user-error">{{user.name}}
+		</div>
+		<div class="panel-body" ng-hide="collapsed">
 			<address></address> <!-- Here we have another directive -->
 			<h4>Friends:</h4>
 			<div class="col-md-2">
@@ -11,12 +13,15 @@
 					</li>
 				</ul>
 			</div>
-			<remove-friend></remove-friend>
+			<div class="col-md-6">
+				<remove-friend></remove-friend>
+			</div>
 			<div class="col-md-12">
 				<div ng-show="!!user.rank">
 					Rank: {{user.rank}}
 				</div>
 				<button ng-show="!user.rank" class="btn btn-success" ng-click="touchButton(user)">Touch Button</button>
+				<button ng-click="nextState()" class="btn btn-info">Next State</button>
 			</div>
 		</div>
 	</div>

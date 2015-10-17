@@ -1,4 +1,27 @@
 <div class="container">
-	<user-info-card></user-info-card>
+	<p>I am here at index of view/userInfoCard/index.html</p>
+	<div ng-repeat="user in users">
+		<div class="panel panel-primary">
+			<div class="panel-heading" ng-click="collapse(user)">{{user.name}}</div>
+			<div class="panel-body" ng-hide="user.collapsed">
+				<div ng-show=!!user.address>
+					<h4>Address:</h4> 
+					Street: {{user.address.street}}</br>  
+					City: {{user.address.city}}</br> 
+					Planet: {{user.address.planet}}
+				</div>
+				<h4>Friends:</h4>
+				<ul>
+					<li ng-repeat='friend in user.friends'>
+						{{friend}}
+					</li>
+				</ul>
+				<div ng-show="!!user.rank">
+					Rank: {{user.rank}}
+				</div>
+				<button ng-show="!user.rank" class="btn btn-success" ng-click="touchButton(user)">Touch Button</button>
+			</div>
+		</div>
+	</div>
 </div>
 

@@ -1,4 +1,5 @@
 <div ng-repeat="user in users">
+	<pre>{{user}}</pre>
 	<div class="panel panel-primary">
 		<div class="panel-heading" ng-click="collapse(user)">{{user.name}}</div>
 		<div class="panel-body" ng-hide="user.collapsed">

@@ -8,12 +8,13 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
     <!-- build:css(.) styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css"/>
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/mystyle.css">
     <!-- endbuild -->
   </head>
   <body>
@@ -96,16 +97,30 @@
 
         <script src="scripts/filters/filters.js"></script>
         <!-- the above queue is used for the group of scripts below -->
-        
-        <script src="scripts/directives/userInfoCard.js"></script>  
 
-        <script src="scripts/routes/angularDirectives.routes.js"></script>
+        <!-- Routes -->
+        <script src="scripts/routes/userInfoCard.routes.js"></script>
         <script src="scripts/routes/userInfoCard1.routes.js"></script>
+        <script src="scripts/routes/video.routes.js"></script>
+        <script src="scripts/routes/userTile.routes.js"></script>
 
+        <!-- Directives -->
+        <script src="scripts/directives/userInfoCardDir/userInfoCardDir.module.js"></script>
+        <script src="scripts/directives/userInfoCardDir/userInfoCardDir.js"></script>
+
+        <script src="scripts/directives/videoDirective.js"></script>
+        <script src="scripts/directives/userTileDirective.js"></script>  
+      
+        <!-- Controllers -->
         <script src="scripts/controllers/home/home.js"></script>
         <script src="scripts/controllers/userInfoCard/userInfoCard.js"></script>
-        <script src="scripts/controllers/userInfoCard/userInfoCard1.js"></script> 
+        <script src="scripts/controllers/userInfoCard1/userInfoCard1.js"></script>
 
+        <script src="scripts/controllers/video/video.module.js"></script>
+        <script src="scripts/controllers/video/video.js"></script> 
+        
+        <script src="scripts/controllers/userTile/userTile.module.js"></script>
+        <script src="scripts/controllers/userTile/userTile.js"></script>
         <!-- endbuild -->
 </body>
 </html>

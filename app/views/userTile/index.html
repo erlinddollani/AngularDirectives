@@ -1,0 +1,13 @@
+<div>
+	<div>I'am not scaled {{size}}</div>
+	
+	<div font-scale="size" ng-model="thisUser">
+		Here is the name of the user from the controller : {{thisUser.name}}
+	</div>
+	<input ng-model="size"/>
+	<br/><br/>
+
+	<div>
+		<user-tile user="thisUser"></user-tile>
+	</div>
+</div>

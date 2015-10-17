@@ -1,3 +1,5 @@
 
 'use strict';
-angular.module('Google.directives', []);
+angular.module('Google.directives', [
+	'Google.userInfoCard.directives'
+	]);

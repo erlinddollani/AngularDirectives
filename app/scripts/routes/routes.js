@@ -1,8 +1,10 @@
 'use strict';
 
 angular.module('Google.routes', [
-	'Google.angularDirectives.routes',
-	'Google.userInfoCard1.routes'
+	'Google.userInfoCard.routes',
+	'Google.userInfoCard1.routes',
+	'Google.video.routes',
+	'Google.userTile.routes'
 	]);
 
 /*kjo gjendje abstract:true nuk aktivizohet direkt dhe parametrat e ksaj trashgohen te children states*/

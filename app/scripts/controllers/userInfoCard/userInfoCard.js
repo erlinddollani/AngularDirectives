@@ -1,4 +1,4 @@
-'use-strict'
+'use-strict';
 
 angular.module('Google.controllers')
 	.controller('userInfoCardController', function($scope) {
@@ -32,33 +32,6 @@ angular.module('Google.controllers')
 				]
 			}
 		]
-		/*$scope.user1 = {
-			name: 'Senior Leone',
-			address: {
-				street: 'Donika Kastrioti',
-				city: 'Tirana',
-				planet: 'Earth'
-			},
-			friends: [
-				'Lupi',
-				'Ben',
-				'Marko'
-			]
-		}
-
-		$scope.user2 = {
-			name: 'Senior Maestro Leone ',
-			address: {
-				street: 'Donika Kastrioti',
-				city: 'Tirana',
-				planet: 'Earth'
-			},
-			friends: [
-				'Lupito',
-				'Ben',
-				'Marko'
-			]
-		}*/
 
 		$scope.collapse = function(relativeUser) {
 			angular.forEach($scope.users, function(user, key) {
@@ -71,4 +44,5 @@ angular.module('Google.controllers')
 		$scope.touchButton = function(user) {
 			user.rank = "Knight";
 		}
+		console.log($scope.users);
 	});

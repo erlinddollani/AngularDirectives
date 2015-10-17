@@ -1,0 +1,25 @@
+/***
+************************* userInfoCardTemplate1.html *******************************/
+ul.no-bullets {
+	list-style-type: none;
+}
+
+.user-ok {
+
+}
+
+.user-warning {
+	color: yellow;
+}
+
+.user-problem {
+	color: orange;
+}
+
+.user-error {
+	color:red;
+}
+
+.highlight {
+	color: red;
+}
