@@ -15,7 +15,8 @@ angular.module('Google.controllers')
 				'Ben',
 				'Marko'
 			],
-			level: 0
+			level: 0,
+			levelColor: 0
 		}
 
 		$scope.user2 = {
@@ -30,9 +31,45 @@ angular.module('Google.controllers')
 				'Ben',
 				'Marko'
 			],
-			level: 1
+			level: 1,
+			levelColor:1
 		}
 
+	})
+	.directive('stateDisplay', function() {
+		return {
+			link: function(scope, element, attrs) {
+				scope.$watch(attrs['stateDisplay'], function(newVal){
+					switch(newVal) {
+						case 0:
+							element.css('background-color', 'white');
+							break;
+						case 1:
+							element.css('background-color', 'yellow');
+							break;
+						case 2:
+							element.css('background-color', 'red');
+							break;
+					}
+				});
+			}
+		}
+	})
+	.directive('displayHeader', function() {
+		return { 
+			link: function(scope, element, attrs) {
+				var params = attrs['displayHeader'].split(' ');
+				var linkVar = params[0];
+				var classes = params.slice(1);
+
+				scope.$watch(linkVar, function(newVal) {
+					console.log(element);
+					console.log(element.removeClass());
+					element.removeClass(classes.join(' '));
+					element.addClass(classes[newVal]);
+				});
+			}
+		}
 	})
 	.directive('userInfo', function() {
 		return {
@@ -42,10 +79,15 @@ angular.module('Google.controllers')
  				user: '=person'
  			},
  			controller: function($scope) {
- 				$scope.collapsed = false; 
+ 				$scope.collapsed = false;
+
  				$scope.nextState = function() {
  					$scope.user.level++;
- 					$scope.user.level = $scope.user.level % 4;
+ 					$scope.user.level = $scope.user.level % 3;
+ 				}
+ 				$scope.changeColor = function() {
+ 					$scope.user.levelColor++;
+ 					$scope.user.levelColor = $scope.user.levelColor % 4; 
  				}
  				$scope.touchButton = function(user) {
  					user.rank = "Knight";
@@ -63,20 +105,19 @@ angular.module('Google.controllers')
  			}
 		}
 	})
-	/*angular.module('Google.controllers')
-		.directive('stateDisplay', function() {
-			return {
-				link: function(scope, el, attrs) {
-					var params = attrs['stateDisplay'].split(' ');
-					var linkVar = params[0];
-					var classes = params.slice(1);
-					scope.$watch(linkVar, function(newVal) {
-						el.removeClass(classes.join(' '));
-						el.addClass(classes[newVal]);
-					});
-				}
+	/*.directive('stateDisplay', function() {
+		return {
+			link: function(scope, el, attrs) {
+				var params = attrs['stateDisplay'].split(' ');
+				var linkVar = params[0];
+				var classes = params.slice(1);
+				scope.$watch(linkVar, function(newVal) {
+					el.removeClass(classes.join(' '));
+					el.addClass(classes[newVal]);
+				});
 			}
-		});*/
+		}
+	});*/
 	.directive('removeFriend', function() {
 		return {
 			restrict: 'E',
