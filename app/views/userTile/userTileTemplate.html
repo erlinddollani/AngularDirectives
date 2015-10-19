@@ -1,3 +1,8 @@
-<div class="well" user-click-select ng-class="{highlight:user.selected}" style="cursor:pointer">
-	<h1>{{user.name}}</h1>
+<div class="well" ng-show="shown">
+	<div style="float:right; margin-top:-15px">
+		<i class="fa fa-times" ng-click="close()" style="cursor:pointer"></i>
+	</div>
+	<div user-click-select ng-class="{highlight:user.selected}" style="cursor:pointer" ng-transclude>
+		<!-- Content goes here -->
+	</div>
 </div>

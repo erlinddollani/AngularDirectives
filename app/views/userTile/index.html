@@ -8,6 +8,13 @@
 	<br/><br/>
 
 	<div>
-		<user-tile user="thisUser"></user-tile>
+		<user-tile user="thisUser">
+			<div>This content goes inside ng-transclude</div>
+			<ul>
+				<li>Item 1</li>
+				<li>Item 2</li>
+			</ul>
+			<div>{{thisUser.message}}</div>
+		</user-tile>
 	</div>
 </div>

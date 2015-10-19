@@ -2,9 +2,10 @@
 
 angular.module('Google.routes', [
 	'Google.userInfoCard.routes',
-	'Google.userInfoCard1.routes',
+	'Google.infoCard.routes',
 	'Google.video.routes',
-	'Google.userTile.routes'
+	'Google.userTile.routes',
+	'Google.myQuestion.routes'
 	]);
 
 /*kjo gjendje abstract:true nuk aktivizohet direkt dhe parametrat e ksaj trashgohen te children states*/

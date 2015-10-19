@@ -1,0 +1,14 @@
+<div class="container" >
+	<h3>Questions</h3>
+	<my-question q="Where is the secret place of Air Forces in United States ?"> 
+		<input type="text" ng-model="answers.baseLocation"/>	
+	</my-question>
+	<my-question q="Who are you?">
+		<input type="radio" ng-value="true" ng-model="answers.name" /> Yes
+		<input type="radio" ng-value="false" ng-model="answers.name" /> No
+	</my-question>
+	<my-question q="What are you looking for?">
+		<button class="btn btn-sm btn-primary"> No</button>
+		<button class="btn btn-sm btn-default">Yes</button>
+	</my-question>
+</div>

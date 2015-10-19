@@ -8,7 +8,6 @@
  				restrict: 'E',
  				templateUrl: "../../views/userInfoCard/userInfoCardTemplate.html",
  				controller: function($scope) {
- 					console.log($scope);
  				}	
  			}
  	});

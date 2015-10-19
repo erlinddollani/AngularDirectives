@@ -1,9 +1,9 @@
 'use strict';
 
 angular.module('Google.controllers')
-	.controller('userInfoCard1Controller', function($scope) {
+	.controller('infoCardController', function($scope) {
 
-		$scope.user1 = {
+		$scope.person1 = {
 			name: 'Senior Leone',
 			address: {
 				street: 'Donika Kastrioti',
@@ -19,7 +19,7 @@ angular.module('Google.controllers')
 			levelColor: 0
 		}
 
-		$scope.user2 = {
+		$scope.person2 = {
 			name: 'Senior Maestro Leone ',
 			address: {
 				street: 'Donika Kastrioti',
@@ -35,6 +35,16 @@ angular.module('Google.controllers')
 			levelColor:1
 		}
 
+		$scope.droid1 = {
+			name: 'AL-GR',
+			specifications: {
+				manifacturer: 'Metallurgical: Elbasan Automation',
+				type: 'Robot',
+				productLine: 'AL series'
+			},
+			level: 0,
+			levelColor: 0
+		}
 	})
 	.directive('stateDisplay', function() {
 		return {
@@ -63,46 +73,77 @@ angular.module('Google.controllers')
 				var classes = params.slice(1);
 
 				scope.$watch(linkVar, function(newVal) {
-					console.log(element);
-					console.log(element.removeClass());
 					element.removeClass(classes.join(' '));
 					element.addClass(classes[newVal]);
 				});
 			}
 		}
 	})
-	.directive('userInfo', function() {
+	.directive('personInfoCard', function() {
 		return {
 			restrict: 'E',
-			templateUrl: "../../views/userInfoCard1/userInfoCardTemplate1.html",
+			templateUrl: "../../views/infoCard/personInfoCardTemplate.html",
  			scope: {
- 				user: '=person'
+ 				person: '=',
+ 				initialCollapsed: '@collapsed'
  			},
  			controller: function($scope) {
- 				$scope.collapsed = false;
-
- 				$scope.nextState = function() {
- 					$scope.user.level++;
- 					$scope.user.level = $scope.user.level % 3;
- 				}
  				$scope.changeColor = function() {
- 					$scope.user.levelColor++;
- 					$scope.user.levelColor = $scope.user.levelColor % 4; 
+ 					$scope.person.levelColor++;
+ 					$scope.person.levelColor = $scope.person.levelColor % 4; 
  				}
- 				$scope.touchButton = function(user) {
- 					user.rank = "Knight";
+ 				$scope.touchButton = function(person) {
+ 					person.rank = "Knight";
  				}
-				$scope.collapse = function() {
-					$scope.collapsed = !$scope.collapsed;
-				}
 				$scope.removeFriend = function(friend) {
-					var inx = $scope.user.friends.indexOf(friend);
+					var inx = $scope.person.friends.indexOf(friend);
 					if(inx > -1) {
-						$scope.user.friends.splice(inx, 1);/*removes one value starting at inx position*/
+						$scope.person.friends.splice(inx, 1);/*removes one value starting at inx position*/
 					}
 				}
 
  			}
+		}
+	})
+	.directive('userPanel', function() {
+		return {
+			restrict: 'E',
+			transclude: true,
+			templateUrl: '../../views/infoCard/userPanel.html',
+			scope: {
+				name: '@',
+				level: '=',
+				initialCollapsed: '@collapsed'
+			},
+			controller: function($scope) {
+					$scope.collapsed = ($scope.initialCollapsed === 'true');
+				$scope.nextState = function(evt) {
+					/*evt.stopPropagation();
+					evt.preventDefault();*/
+					$scope.level++;
+					$scope.level = $scope.level % 4;
+				}
+				$scope.changeColor =  function() {
+					$scope.levelColor++;
+					$scope.levelColor = $scope.levelColor % 4;
+				}
+				$scope.collapse = function() {
+					$scope.collapsed = !$scope.collapsed;
+				}
+			}
+		}
+	})
+	.directive('droidInfoCard', function() {
+		return {
+			templateUrl: '../../views/infoCard/droidInfoCardTemplate.html',
+			restrict: 'E',
+			scope: {
+				droid: '=',
+				initialCollapsed: '@collapsed'
+			},
+			controller: function($scope) {
+			
+			}
 		}
 	})
 	/*.directive('stateDisplay', function() {
@@ -121,13 +162,13 @@ angular.module('Google.controllers')
 	.directive('removeFriend', function() {
 		return {
 			restrict: 'E',
-			templateUrl: "../../views/userInfoCard1/removeFriendTemplate.html"
+			templateUrl: "../../views/infoCard/removeFriendTemplate.html"
 		}
 	})
 	.directive('confirmRemove', function() {
 		return {
 			restrict: 'E',
-			templateUrl: "../../views/userInfoCard1/confirmRemoveTemplate.html",
+			templateUrl: "../../views/infoCard/confirmRemoveTemplate.html",
 			controller: function($scope) {
 				$scope.removing = false;
 				$scope.startRemove = function() {
@@ -143,6 +184,6 @@ angular.module('Google.controllers')
 		return {
 			restrict: 'E',
 			scope: true,
-			templateUrl: "../../views/userInfoCard1/addressTemplate.html",
+			templateUrl: "../../views/infoCard/addressTemplate.html",
 		}
 	});

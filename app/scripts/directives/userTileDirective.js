@@ -6,7 +6,14 @@ angular.module('Google.directives',[])
 			scope: {
 				user: '='
 			},
-			templateUrl: "../../views/userTile/userTileTemplate.html"
+			templateUrl: "../../views/userTile/userTileTemplate.html",
+			controller: function($scope) {
+				$scope.shown = true;
+				$scope.close = function() {
+					$scope.shown = false;
+				}
+			},
+			transclude: true
 		}
 	})
 	.directive('userClickSelect', function(){

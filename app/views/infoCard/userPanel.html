@@ -1,0 +1,8 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<span ng-click="collapse()" style="cursor:pointer" display-header="levelColor person-ok person-warning person-problem person-error">{{name}}</span>
+		<span class="pull-right"><button ng-click="nextState(event)" class="btn-xs btn-info">Header Color</button></span>
+	</div>
+	<div class="panel-body" ng-hide="collapsed" ng-transclude>
+	</div>
+</div>

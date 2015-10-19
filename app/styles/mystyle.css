@@ -11,16 +11,16 @@ ul.no-bullets {
 	margin-top: -8%;
 }
 
-.user-ok {
+.person-ok {
 
 }
-.user-warning {
+.person-warning {
 	color: yellow;
 }
-.user-problem {
+.person-problem {
 	color: orange;
 }
-.user-error {
+.person-error {
 	color: red;
 }
 
