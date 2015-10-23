@@ -27,3 +27,99 @@ ul.no-bullets {
 .highlight {
 	color: #A80000;
 }
+
+/* * * Animated menu in trafficLight
+******************************************************** * * */
+
+  .animated-menu {
+      /*background: #ccc;*/
+      background-color: #00CC99;
+      position: fixed;
+      box-shadow: 0 3px 10px;
+      /*box-shadow: #00CC99;*/
+  }
+  /* Vertical menu that slides from the left or right */
+   
+  .animated-menu-left {
+      left: -500px;
+  }
+  .animated-menu-right {
+      right: -240px;
+  }
+  .animated-menu-left.animated-menu-open {
+      left: 0px;
+  }
+  .animated-menu-right.animated-menu-open {
+      right: 0px;
+  }
+  /* Orientation-dependent styles for the content of the menu */
+   
+  .animated-menu-vertical {
+      width: 20%;
+      max-width: 500px;
+      height: 100%;
+      top: 78px;
+      z-index: 998;
+      overflow: scroll;
+  }
+  /* Push classes applied to the body */
+   
+  .animated-menu-push {
+      position: relative;
+      left: 0;
+  } 
+  .animated-menu-push-toright {
+      left: 0px;
+  }
+  .animated-menu-push-toleft {
+      left: -25%;
+  }
+  /* Transitions */
+   
+  .animated-menu,
+  .animated-menu-push {
+      -webkit-transition: all 0.3s ease;
+      -moz-transition: all 0.3s ease;
+      transition: all 0.3s ease;
+  }
+/* * * SpreadSheet
+******************************************************** * * */
+.output, input {
+    font-family: sans-serif;
+    font-size: 10pt;
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    overflow: hidden;
+  }
+  input { 
+  	background: rgba(255, 0, 0, 0.2); 
+  	border: none;
+  }
+  .output { 
+    background: rgba(200, 200, 255, 1);
+    pointer-events: none;
+    padding-top: 7px;
+  }
+  /* Css sibling selector to hide the output when the input is selected */
+  input:focus + .output { 
+  	display: none; 
+  }
+  table { 
+  	border-collapse: collapse;
+  	max-width: 660px; 
+  } 
+  td > div {
+    width: 100px;
+    height: 30px;
+  } 
+  td { 
+  	border: 1px solid #EEE; 
+  }
+  .column-label  > td, .row-label {
+    text-align: center;
+    /*background: #EEE;*/
+  }
+  .row-label { 
+  	width: 2em; 
+  }
