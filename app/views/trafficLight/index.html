@@ -4,23 +4,25 @@
     <div animated-menu test="{{hello}}" parse-test="hello = hello + ' world'"></div>
 </div>
 <div class="well"><h3 style="color: #5cb85c">Awesome...............Dream</h3>
-	<div class="row" ng-controller="sheet" style="margin-bottom:5%">
-		<!--<input class="text-center" ng-model="cell"/>
-		<div ng-bind="compute()" class="output text-center"></div>-->
-		<table>
-			<tr class="column-label">
-				<td></td>
-				<td ng-repeat="column in columns">{{column}}</td>
-			</tr>
-			<tr ng-repeat="row in rows">
-				<td class="row-label">{{row}}</td>
-				<td ng-repeat="column in columns">
-					<div>
-						<input ng-model="cells[column+row]" class="text-center" />
-						<div ng-bind="compute(column+row)" class="output text-center"></div>
-					</div>
-				</td>
-			</tr>
-		</table>
+	<div ng-controller="spreadsheetController">
+		<div class="row" ng-controller="sheet" style="margin-bottom:5%">
+			<!--<input class="text-center" ng-model="cell"/>
+			<div ng-bind="compute()" class="output text-center"></div>-->
+			<table>
+				<tr class="column-label">
+					<td></td>
+					<td ng-repeat="column in columns">{{column}}</td>
+				</tr>
+				<tr ng-repeat="row in rows">
+					<td class="row-label">{{row}}</td>
+					<td ng-repeat="column in columns">
+						<div>
+							<input ng-model="cells[column+row]" class="text-center" />
+							<div ng-bind="compute(column+row)" class="output text-center"></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</div>
 	</div>
 </div>

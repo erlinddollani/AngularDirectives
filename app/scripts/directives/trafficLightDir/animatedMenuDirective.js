@@ -4,7 +4,6 @@ angular.module('Google.trafficLight.directives', [])
 		return {
 			restrict: 'EA',
 			replace: true,
-			controller: '',
 			/*scope: {
 				test: '&'
 			},*/
