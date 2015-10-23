@@ -30,7 +30,6 @@ angular.module('Google.trafficLight.controllers', ['Google.trafficLight.directiv
 					})
 				}
 			}	
-
 			$scope.compute = function(cell) {
 				try {
 					return $parse($scope.process($scope.cells[cell]))($scope);
