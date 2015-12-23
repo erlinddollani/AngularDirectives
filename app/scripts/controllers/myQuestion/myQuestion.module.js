@@ -1,2 +1,2 @@
 'use strict';
-angular.module('Google.myQuestion.controllers', []);
+angular.module('Commit.myQuestion.controllers', []);

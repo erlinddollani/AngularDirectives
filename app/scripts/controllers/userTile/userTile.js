@@ -1,5 +1,5 @@
 'use strict';
-angular.module('Google.userTile.controllers',[])
+angular.module('Commit.userTile.controllers',[])
 	.controller('userTileController', function($scope){
 		$scope.thisUser = {
 			name: 'Erlind',

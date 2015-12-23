@@ -1,9 +1,9 @@
 
 'use strict';
-angular.module('Google.directives', [
-	'Google.updateTitle.directives',
-	'Google.userInfoCard.directives',
-	'Google.video.directives',
-	'Google.myQuestion.directives',
-	'Google.trafficLight.directives'
+angular.module('Commit.directives', [
+	'Commit.updateTitle.directives',
+	'Commit.userInfoCard.directives',
+	'Commit.video.directives',
+	'Commit.myQuestion.directives',
+	'Commit.trafficLight.directives'
 	]);

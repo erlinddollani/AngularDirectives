@@ -1,5 +1,5 @@
 'use strict';
-angular.module('Google.myQuestion.controllers', ['Google.myQuestion.directives'])
+angular.module('Commit.myQuestion.controllers', ['Commit.myQuestion.directives'])
 	.controller('myQuestionController', function($scope) {
 		$scope.answers = {
 			baseLocation: "area 51 in Nevada Desert"

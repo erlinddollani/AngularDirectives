@@ -1,2 +1,2 @@
 'use strict';
-angular.module('Google.userInfoCard.directives', []);
+angular.module('Commit.userInfoCard.directives', []);

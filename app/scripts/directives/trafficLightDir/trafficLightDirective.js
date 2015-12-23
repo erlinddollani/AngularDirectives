@@ -1,5 +1,5 @@
 'use strict';
-angular.module('Google.trafficLight.directives', [])
+angular.module('Commit.trafficLight.directives', [])
 	.directive('stopLightContainer', function() {
 		console.log('Inside trafficLight directive');
 		return {
@@ -7,7 +7,7 @@ angular.module('Google.trafficLight.directives', [])
 			scope: {
 				options: '='
 			}
-		};	
+		};
 	})
 	.directive('stopLight', function() {
 		return {
@@ -20,4 +20,3 @@ angular.module('Google.trafficLight.directives', [])
 			}
 		}
 	});
-	

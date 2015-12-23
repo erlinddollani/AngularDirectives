@@ -1,8 +1,9 @@
 
 'use strict';
-angular.module('Google.controllers', [
-	'Google.video.controllers',
-	'Google.userTile.controllers',
-	'Google.myQuestion.controllers',
-	'Google.trafficLight.controllers'
+angular.module('Commit.controllers', [
+	'Commit.video.controllers',
+	'Commit.userTile.controllers',
+	'Commit.myQuestion.controllers',
+	'Commit.trafficLight.controllers',
+	'Commit.grid.controllers'
 	]);

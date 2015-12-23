@@ -1,2 +1,2 @@
 'use strict';
-angular.module('Google.myQuestion.directives', []);
+angular.module('Commit.myQuestion.directives', []);

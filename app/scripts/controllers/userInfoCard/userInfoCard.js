@@ -1,6 +1,6 @@
 'use-strict';
 
-angular.module('Google.controllers')
+angular.module('Commit.controllers')
 	.controller('userInfoCardController', function($scope) {
 		$scope.users = [
 			{

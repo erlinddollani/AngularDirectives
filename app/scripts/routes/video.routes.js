@@ -1,8 +1,8 @@
 'use strict';
-angular.module('Google.video.routes',[])
+angular.module('Commit.video.routes',[])
 	.config(function($stateProvider){
 		$stateProvider
-			.state('Google.video', {
+			.state('Commit.video', {
 				url: '/video',
 				templateUrl: '../../views/video/index.html',
 				pageTitle: 'Video Directive',

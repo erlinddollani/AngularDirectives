@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('Google.updateTitle.directives',[])
+angular.module('Commit.updateTitle.directives',[])
   .directive('updateTitle', ['$rootScope', '$timeout',
     function ($rootScope, $timeout) {
       return {
@@ -8,7 +8,7 @@ angular.module('Google.updateTitle.directives',[])
 
           var listener = function (event, toState) {
 
-            var title = 'Google';
+            var title = 'Commit';
             if (toState && toState.pageTitle) {
               title = toState.pageTitle;
             }

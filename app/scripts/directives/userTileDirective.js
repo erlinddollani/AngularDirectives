@@ -1,5 +1,5 @@
 'use strict';
-angular.module('Google.directives',[])
+angular.module('Commit.directives',[])
 	.directive('userTile', function(){
 		return {
 			restrict: 'E',
@@ -26,7 +26,7 @@ angular.module('Google.directives',[])
 			}
 		}
 	})
-	.directive('fontScale', function() { 
+	.directive('fontScale', function() {
 		return {
 			link: function(scope, element, attrs) {
 				scope.$watch(attrs['fontScale'], function(newVal) {

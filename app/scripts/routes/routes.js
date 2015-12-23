@@ -1,20 +1,21 @@
 'use strict';
 
-angular.module('Google.routes', [
-	'Google.userInfoCard.routes',
-	'Google.infoCard.routes',
-	'Google.video.routes',
-	'Google.userTile.routes',
-	'Google.myQuestion.routes',
-	'Google.trafficLight.routes'
+angular.module('Commit.routes', [
+	'Commit.userInfoCard.routes',
+	'Commit.infoCard.routes',
+	'Commit.video.routes',
+	'Commit.userTile.routes',
+	'Commit.myQuestion.routes',
+	'Commit.trafficLight.routes',
+	'Commit.grid.routes'
 	]);
 
 /*kjo gjendje abstract:true nuk aktivizohet direkt dhe parametrat e ksaj trashgohen te children states*/
-angular.module('Google.routes')
+angular.module('Commit.routes')
 	.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider){
 		$stateProvider
-			.state('Google', {
-				abstract: true, 
+			.state('Commit', {
+				abstract: true,
 				template: '<div ui-view></div>',
 				pageTitle: '-',
 				reloadOnSearch: false,
@@ -22,7 +23,7 @@ angular.module('Google.routes')
 
 				}
 			})
-			.state('Google.home', {
+			.state('Commit.home', {
 				url: '/home',
 				templateUrl: '../../views/home/home.html',
 				controller: 'homeController',

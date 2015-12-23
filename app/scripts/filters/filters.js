@@ -1,3 +1,3 @@
 
 'use strict';
-angular.module('Google.filters', []);
+angular.module('Commit.filters', []);

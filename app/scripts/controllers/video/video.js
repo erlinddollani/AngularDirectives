@@ -1,5 +1,5 @@
 'use strict';
-angular.module('Google.video.controllers', ['Google.video.directives'])
+angular.module('Commit.video.controllers', ['Commit.video.directives'])
 	.controller('videoController', function($scope) {
 		$scope.messages = [];
 

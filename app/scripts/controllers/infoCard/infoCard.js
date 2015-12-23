@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('Google.controllers')
+angular.module('Commit.controllers')
 	.controller('infoCardController', function($scope) {
 
 		$scope.person1 = {
@@ -66,7 +66,7 @@ angular.module('Google.controllers')
 		}
 	})
 	.directive('displayHeader', function() {
-		return { 
+		return {
 			link: function(scope, element, attrs) {
 				var params = attrs['displayHeader'].split(' ');
 				var linkVar = params[0];
@@ -90,7 +90,7 @@ angular.module('Google.controllers')
  			controller: function($scope) {
  				$scope.changeColor = function() {
  					$scope.person.levelColor++;
- 					$scope.person.levelColor = $scope.person.levelColor % 4; 
+ 					$scope.person.levelColor = $scope.person.levelColor % 4;
  				}
  				$scope.touchButton = function(person) {
  					person.rank = "Knight";
@@ -142,7 +142,7 @@ angular.module('Google.controllers')
 				initialCollapsed: '@collapsed'
 			},
 			controller: function($scope) {
-			
+
 			}
 		}
 	})

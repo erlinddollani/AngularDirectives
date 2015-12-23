@@ -1,6 +1,6 @@
 
 'use strict';
-angular.module('Google.controllers')
+angular.module('Commit.controllers')
   .controller('homeController', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',

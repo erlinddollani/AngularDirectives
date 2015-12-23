@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('Google.myQuestion.routes',[])
+angular.module('Commit.myQuestion.routes',[])
 	.config(function($stateProvider) {
 		$stateProvider
-			.state('Google.myQuestion', {
+			.state('Commit.myQuestion', {
 				url: '/Questionnaire',
 				templateUrl: '../../views/myQuestion/index.html',
 				controller: 'myQuestionController',

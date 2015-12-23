@@ -1,9 +1,9 @@
 
 'use strict';
-angular.module('Google.userInfoCard.routes',[])
+angular.module('Commit.userInfoCard.routes',[])
 	.config(function($stateProvider) {
 		$stateProvider
-			.state('Google.userInfoCard', {
+			.state('Commit.userInfoCard', {
 				url: '/userInfoCardDirective',
 				templateUrl: '../../views/userInfoCard/index.html',
 				controller: 'userInfoCardController',

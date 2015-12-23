@@ -1,2 +1,2 @@
 'use strict';
-angular.module('Google.trafficLight.directives', []);
+angular.module('Commit.trafficLight.directives', []);

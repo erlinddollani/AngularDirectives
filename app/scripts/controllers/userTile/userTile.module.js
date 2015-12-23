@@ -1,2 +1,2 @@
 'use strict';
-angular.module('Google.userTile.controllers',[])
+angular.module('Commit.userTile.controllers',[])

@@ -3,17 +3,17 @@
 /**
  * Main module of the application.
  */
-angular.module('Google', [
+angular.module('Commit', [
   	'ui.router',
     'ngCookies',
     'ngResource',
     'ngSanitize',
     'ngTouch',
-    'Google.services',
-    'Google.directives',
-    'Google.updateTitle.directives',
-    'Google.controllers',
-    'Google.routes',
-    'Google.templates',
-    'Google.filters'
+    'Commit.services',
+    'Commit.directives',
+    'Commit.updateTitle.directives',
+    'Commit.controllers',
+    'Commit.routes',
+    'Commit.templates',
+    'Commit.filters'
   ]);

@@ -1,2 +1,2 @@
 'use strict';
-angular.module('Google.video.directives', []);
+angular.module('Commit.video.directives', []);

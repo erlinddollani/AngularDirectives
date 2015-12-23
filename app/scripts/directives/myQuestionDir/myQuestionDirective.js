@@ -1,5 +1,5 @@
 'use strict';
-angular.module('Google.myQuestion.directives', [])
+angular.module('Commit.myQuestion.directives', [])
 	.directive('myQuestion', function() {
 		return {
 			restrict: 'E',

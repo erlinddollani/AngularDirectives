@@ -1,3 +1,3 @@
 
 'use strict',
-angular.module('Google.services', []);
+angular.module('Commit.services', []);

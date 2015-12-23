@@ -1,8 +1,8 @@
 'use strict';
-angular.module('Google.userTile.routes', [])
+angular.module('Commit.userTile.routes', [])
 	.config(function($stateProvider) {
 		$stateProvider
-			.state('Google.userTile', {
+			.state('Commit.userTile', {
 				url: '/userTile',
 				templateUrl: '../../views/userTile/index.html',
 				pageTitle: 'User Tile',

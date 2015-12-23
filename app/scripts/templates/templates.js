@@ -1,3 +1,3 @@
 
 'use strict';
-angular.module('Google.templates', []);
+angular.module('Commit.templates', []);

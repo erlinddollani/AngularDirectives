@@ -1,9 +1,9 @@
 'use strict';
 
-angular.module('Google.trafficLight.routes', [])
+angular.module('Commit.trafficLight.routes', [])
 	.config(function($stateProvider){
 		$stateProvider
-			.state('Google.trafficLight', {
+			.state('Commit.trafficLight', {
 				url: '/trafficLight',
 				templateUrl: '../../views/trafficLight/index.html',
 				controller: 'stopLightController',
