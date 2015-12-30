@@ -12,6 +12,7 @@ angular.module('Commit', [
     'Commit.services',
     'Commit.directives',
     'Commit.updateTitle.directives',
+    'Commit.grid.directives',
     'Commit.controllers',
     'Commit.routes',
     'Commit.templates',

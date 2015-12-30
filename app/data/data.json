@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "product": "Swatch",
+      "description": "This is an amazing watch",
+      "cost": 20
+    },
+    {
+      "product": "GL Mercedez",
+      "description": "This is an awsame Mercedez",
+      "cost": 4000
+    },
+    {
+      "product": "Microsoft Surface Book",
+      "description": "This is really really amazing product, made by Microsoft",
+      "cost": 1400
+    },
+    {
+      "product": "test",
+      "description": "Test description",
+      "cost": 0
+    }
+  ]
+}
