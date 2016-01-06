@@ -1,14 +1,14 @@
 'use strict';
 
 angular.module('Commit.services')
-  .factory('booksFactory', function(){
+  .factory('booksFactory', function($q, $timeout){
     return {
-      getAllBooks: getAllBooks(),
+      getAllBooks: getAllBooks,
       getAllReaders: getAllReaders()
     };
 
     function getAllBooks() {
-      return [
+      var booksArray = [
         {
           book_id: 1,
           title: "Harry Potter",
@@ -28,6 +28,27 @@ angular.module('Commit.services')
           year_published: 2012
         }
       ];
+      /*A deferred object is simply an object that exposes a promise as well as the associated methods for resolving that promise.
+      It is constructed using the $q.deferred() function and exposes three main methods:
+      resolve(), reject(), and notify().
+      The associated promise object can be accessed via the "promise" property */
+
+      var deferred = $q.defer();// po krijojme nje deferred object i cili ben te mundur perdorimin e promise
+      $timeout(function() {     // $timeout simulon procesin asinkron
+        var successful = true;
+        if(successful) {
+          // notify is used for notification
+          deferred.notify('Please wait...');
+          deferred.notify('You are in the right way...Thankyou !!!');
+          deferred.resolve(booksArray);
+        } else {
+          deferred.reject("Error retrieving books");
+        }
+      }, 100);
+      return deferred.promise;
+      //Now that we've obtained a Promise object (defer.promise), let's register a callback function
+      //that'll be executed after the async function completes -->
+      //Using the then() method, attach a callback function to the returned promise object that prints out the returned string .
     }
 
     function getAllReaders() {
