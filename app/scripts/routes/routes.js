@@ -7,7 +7,8 @@ angular.module('Commit.routes', [
 	'Commit.userTile.routes',
 	'Commit.myQuestion.routes',
 	'Commit.trafficLight.routes',
-	'Commit.grid.routes'
+	'Commit.grid.routes',
+	'Commit.books.routes'
 	]);
 
 /*kjo gjendje abstract:true nuk aktivizohet direkt dhe parametrat e ksaj trashgohen te children states*/

@@ -1,0 +1,43 @@
+<div class="well">
+  {{appName}}
+</div>
+<div class="well">
+  {{appDesc}}
+</div>
+<div class="table-responsive col-xs-6">
+  <table class="table">
+    <thead>
+      <th class="text-center">Book Id</th>
+      <th class="text-center">Title</th>
+      <th class="text-center">Author</th>
+      <th class="text-center">Year Published</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="book in booksArray">
+        <td class="success text-center" ng-bind="book.book_id"></td>
+        <td class="info text-center" ng-bind="book.title"></td>
+        <td class="danger text-center" ng-bind="book.author"></td>
+        <td class="warning text-center" ng-bind="book.year_published"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="table-reponsive col-xs-6">
+  <table class="table">
+    <thead>
+      <th class="text-center">Reader Id</th>
+      <th class="text-center">Name</th>
+      <th class="text-center">Weekly Reading Goal</th>
+      <th class="text-center">Year Minutes Read</th>
+    </thead>
+    <tbody>
+      <tr ng-repeat="book in readersArray">
+        <td class="success text-center" ng-bind="book.reader_id"></td>
+        <td class="info text-center" ng-bind="book.name"></td>
+        <td class="danger text-center" ng-bind="book.weeklyReadingGoal"></td>
+        <td class="warning text-center" ng-bind="book.totalMinutesRead"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
