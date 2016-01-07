@@ -15,7 +15,7 @@ ul.no-bullets {
 
 }
 .person-warning {
-	color: yellow;
+	background-color: yellow;
 }
 .person-problem {
 	color: orange;

@@ -118,9 +118,11 @@ angular.module('Google.controllers')
 			controller: function($scope) {
 					$scope.collapsed = ($scope.initialCollapsed === 'true');
 				$scope.nextState = function(evt) {
+					console.log("HEREEEEEEEE");
 					/*evt.stopPropagation();
 					evt.preventDefault();*/
 					$scope.level++;
+					console.log($scope.level);
 					$scope.level = $scope.level % 4;
 				}
 				$scope.changeColor =  function() {
